@@ -7,6 +7,7 @@ class ContactPage extends BasePage {
     get messageField() { return $('#message') }
     get sendButton() { return $('#submitMessage') }
     get successAlert() { return $('.alert.alert-success') }
+    get errorAlert() { return $('.alert.alert-danger') }
 
     async open() {
         await super.open('http://automationpractice.com/index.php?controller=contact')
