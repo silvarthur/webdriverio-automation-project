@@ -13,12 +13,12 @@ class ContactPage extends BasePage {
     }
 
     async sendMessage(subject, email, orderId, message) {
-        await this.subjectHeadingSelector.selectByVisibleText(subject)
-        await this.emailField.setValue(email)
-        await this.orderReferenceField.setValue(orderId)
-        await this.messageField.setValue(message)
+        await this.selectOptionByVisibleText(this.subjectHeadingSelector, subject)
+        await this.sendKeysToAnElement(this.emailField, email)
+        await this.sendKeysToAnElement(this.orderReferenceField, orderId)
+        await this.sendKeysToAnElement(this.messageField, message)
 
-        await this.sendButton.click()
+        await this.clickOnElement(this.sendButton)
     }
 }
 

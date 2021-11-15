@@ -8,7 +8,7 @@ class HomePage extends BasePage {
     }
 
     async goToContactPage () {
-        await this.contactUsButton.click()
+        await this.clickOnElement(this.contactUsButton)
     }
 }
 
